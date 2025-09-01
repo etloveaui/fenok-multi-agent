@@ -6,7 +6,10 @@ node_modules/
 npm-debug.log*
 .npm
 
-# Claude 개인 설정
+# Claude 개인 설정 (로컬 프로젝트)
+.claude/settings.json
+.claude/session-*
+.claude/*.log
 configs/claude/settings.local.json
 configs/claude/.claude_session
 configs/claude/api_keys

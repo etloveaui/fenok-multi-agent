@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude doctor)",
+      "Read(/home/etloveaui/.npm-global/lib/node_modules/@anthropic-ai/claude-code/**)",
+      "Bash(npm uninstall:*)",
+      "Bash(export:*)",
+      "Bash(hash:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

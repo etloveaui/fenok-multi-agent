@@ -1,0 +1,50 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Claude",
+            "type": "shell",
+            "command": "npm",
+            "args": ["run", "claude"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new"
+            },
+            "isBackground": false,
+            "problemMatcher": []
+        },
+        {
+            "label": "Claude IDE",
+            "type": "shell",
+            "command": "npm",
+            "args": ["run", "claude:ide"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new"
+            },
+            "isBackground": false,
+            "problemMatcher": []
+        },
+        {
+            "label": "Claude Continue",
+            "type": "shell",
+            "command": "npm",
+            "args": ["run", "claude:continue"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new"
+            },
+            "isBackground": false,
+            "problemMatcher": []
+        }
+    ]
+}

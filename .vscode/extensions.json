@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "ms-vscode-remote.remote-wsl",
+        "ms-vscode.vscode-json",
+        "timonwong.shellcheck",
+        "foxundermoon.shell-format"
+    ]
+}

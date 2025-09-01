@@ -1,0 +1,20 @@
+[
+    {
+        "key": "ctrl+shift+c",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Claude IDE",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+alt+c",
+        "command": "workbench.action.tasks.runTask", 
+        "args": "Claude",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+r",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Claude Continue",
+        "when": "!terminalFocus"
+    }
+]

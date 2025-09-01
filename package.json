@@ -1,0 +1,26 @@
+{
+  "name": "fenok-multi-agent",
+  "version": "1.0.0",
+  "description": "🤖 WSL2 Ubuntu 기반 AI 에이전트 통합 개발 환경",
+  "main": "index.js",
+  "scripts": {
+    "claude": "npx claude",
+    "claude:ide": "npx claude --ide", 
+    "claude:continue": "npx claude --continue",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/etloveaui/fenok-multi-agent.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/etloveaui/fenok-multi-agent/issues"
+  },
+  "homepage": "https://github.com/etloveaui/fenok-multi-agent#readme",
+  "dependencies": {
+    "@anthropic-ai/claude-code": "^1.0.98"
+  }
+}
