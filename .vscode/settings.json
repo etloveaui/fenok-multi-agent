@@ -1,0 +1,16 @@
+{
+    "terminal.integrated.env.linux": {
+        "PATH": "${workspaceFolder}/node_modules/.bin:${env:PATH}"
+    },
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.cwd": "${workspaceFolder}",
+    "files.eol": "\n",
+    "files.encoding": "utf8",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "files.associations": {
+        "*.sh": "shellscript"
+    },
+    "shellcheck.enable": true,
+    "remote.WSL.fileWatcher.polling": true
+}
