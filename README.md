@@ -4,17 +4,45 @@
 
 ## 🚀 Quick Start
 
+### 새로운 PC/환경에서 설치
 ```bash
 # 1. 저장소 클론
-git clone https://github.com/etloveaui/fenok-multi-agent.git
+git clone https://github.com/etloveaui/fenok-multi-agent.git  
 cd fenok-multi-agent
 
-# 2. 의존성 설치
+# 2. 의존성 설치 (Claude Code 포함)
 npm install
 
 # 3. Claude Code 실행
 npm run claude
 ```
+
+### 기존 환경에서 실행
+```bash
+cd fenok-multi-agent
+npm run claude
+```
+
+## ⚙️ WSL2 환경 설정 (최초 1회)
+
+이 프로젝트는 `Ubuntu-22.04` 기반으로 최적화되어 있습니다. WSL 사용 시 아래 설정을 권장합니다.
+
+### 기본 배포판 설정
+```powershell
+# 설치된 배포판 확인
+wsl -l -v
+
+# 기본 배포판을 Ubuntu-22.04로 설정
+wsl --set-default Ubuntu-22.04
+```
+
+### 중복 배포판 정리 (옵션)
+기존 `Ubuntu` 배포판과 중복된 경우, 아래 명령어로 제거 가능:
+```powershell
+wsl --unregister Ubuntu
+```
+
+> ✅ 설정 후 `wsl` 명령어로 바로 개발 환경 진입 가능
 
 ## 📦 설치된 AI 도구
 
@@ -56,10 +84,22 @@ Claude Code 첫 실행 시 자동으로 OAuth 로그인 프로세스가 시작�
 
 ## 🎯 특징
 
-- **로컬 설치**: 프로젝트별로 Claude Code 관리
+- **환경 이식성**: 어떤 PC에서든 `git clone` + `npm install`로 즉시 실행
+- **로컬 설치**: 프로젝트별로 Claude Code 관리 (글로벌 설치 불필요)
 - **Git 통합**: 모든 설정과 스크립트가 버전 관리됨
 - **WSL2 최적화**: Ubuntu 환경에서 네이티브 실행
+- **크로스 플랫폼**: Windows, macOS, Linux 지원
 - **확장 가능**: 향후 Gemini, Codex 등 추가 예정
+
+## 🔧 환경별 호환성
+
+### Windows (WSL2)
+- **권장**: Ubuntu-22.04 배포판
+- **Git UI**: SourceTree, GitHub Desktop 등과 호환
+
+### macOS / Linux
+- Node.js 18+ 환경에서 동일하게 동작
+- 터미널에서 바로 실행 가능
 
 ## 🔄 업데이트
 

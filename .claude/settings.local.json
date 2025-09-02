@@ -5,7 +5,12 @@
       "Read(/home/etloveaui/.npm-global/lib/node_modules/@anthropic-ai/claude-code/**)",
       "Bash(npm uninstall:*)",
       "Bash(export:*)",
-      "Bash(hash:*)"
+      "Bash(hash:*)",
+      "Bash(claude --version)",
+      "Bash(git config:*)",
+      "Bash(git branch:*)",
+      "Bash(ssh:*)",
+      "Bash(git add:*)"
     ],
     "deny": [],
     "ask": []
