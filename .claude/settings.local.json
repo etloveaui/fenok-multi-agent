@@ -22,7 +22,12 @@
       "Bash(npm run claude -- /help)",
       "mcp__context7__resolve-library-id",
       "mcp__sequential-thinking__sequentialthinking",
-      "mcp__playwright__browser_snapshot"
+      "mcp__playwright__browser_snapshot",
+      "mcp__playwright__browser_install",
+      "Read(/home/etloveaui/.claude/**)",
+      "Read(/home/etloveaui/.claude/**)",
+      "Read(/home/etloveaui/.claude/plugins/**)",
+      "Read(/home/etloveaui/.claude/**)"
     ],
     "deny": [],
     "ask": []
