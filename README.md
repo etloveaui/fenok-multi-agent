@@ -141,10 +141,19 @@ ssh -T git@github.com
 
 ## 📚 상세 문서
 
+### 사용 가이드
 - [Git UI 도구 호환성 가이드](docs/git-ui-setup.md) - 소스트리, GitHub Desktop 등 설정
 - [VS Code Git 설정 가이드](docs/vscode-git-setup.md) - WSL2 환경에서 VS Code Git 사용법  
 - [환경 이식성 가이드](docs/environment-setup.md) - 새 PC에서 완전 복원하는 방법
+- [SuperClaude 설치 가이드](docs/superclaude-installation.md) - 고급 Claude 도구 설치 방법
+
+### 개발 전략
+- [로컬 설치 전략](docs/local-installation-strategy.md) - CLI/IDE 도구들의 로컬 설치 철학
+
+### 프로젝트 정보
+- [프로젝트 로드맵](docs/project-roadmap.md) - 개발 계획 및 향후 방향성
+- [개발 기록](docs/development-history.md) - 주요 이슈 해결 과정 및 학습 내용
 
 ## 📝 개발 노트
 
-`참고후삭제/` 디렉터리에는 이 프로젝트 개발 과정의 계획과 시행착오가 기록되어 있습니다.
+이 프로젝트의 개발 과정과 주요 결정사항들은 [개발 기록](docs/development-history.md)에 상세히 문서화되어 있습니다.
