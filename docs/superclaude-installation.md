@@ -30,44 +30,43 @@ pipx --version || pip3 --version
 
 ## 🚀 SuperClaude Framework 설치 방법
 
-### Option 1: Quick Installation (권장)
-```bash
-# 원스톱 설치 (자동 백업 포함)
-git clone https://github.com/SuperClaude-Org/SuperClaude_Framework.git
-cd SuperClaude_Framework
-./install.sh
-
-# 커스텀 디렉터리 설치
-./install.sh --dir ~/.claude-custom
-
-# 기존 설치 업데이트
-./install.sh --update
-
-# 설치 미리보기 (실제 설치 안함)
-./install.sh --dry-run
-```
-
-### Option 2: pipx를 통한 설치 (Python 격리)
+### Option 1: pipx를 통한 설치 (✅ 권장)
 ```bash
 # pipx 설치 (없는 경우)
 python3 -m pip install --user pipx
 python3 -m pipx ensurepath
 
-# SuperClaude v4 설치
+# SuperClaude v4.0.8 설치 (최신)
 pipx install SuperClaude
 pipx upgrade SuperClaude
 SuperClaude install
 ```
 
-### Option 3: uv를 통한 현대적 설치
+### Option 2: pip를 통한 설치
 ```bash
-# uv 설치 (고성능 Python 패키지 매니저)
-curl -LsSf https://astral.sh/uv/install.sh | sh
+# 일반 pip 설치
+pip install SuperClaude
+pip upgrade SuperClaude
+SuperClaude install
+```
 
-# SuperClaude 설치
-git clone https://github.com/SuperClaude-Org/SuperClaude_Framework.git
-cd SuperClaude_Framework
-uv sync
+### Option 3: npm을 통한 설치 (크로스 플랫폼)
+```bash
+# Node.js 사용자용
+npm install -g @bifrost_inc/superclaude
+superclaude install
+```
+
+### PEP 668 오류 해결 (시스템 패키지 충돌 시)
+```bash
+# Option 1: pipx 사용 (권장)
+pipx install SuperClaude
+
+# Option 2: 사용자 설치
+pip install --user SuperClaude
+
+# Option 3: 강제 설치 (주의해서 사용)
+pip install --break-system-packages SuperClaude
 ```
 
 ## 📁 설치 후 구조
