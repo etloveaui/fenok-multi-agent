@@ -29,6 +29,26 @@ logs/
 *.temp
 *.bak
 
+# 시스템 캐시 및 식별자 파일
+*.identifier
+.identifier*
+*.cache
+.cache/
+*.pid
+.pid*
+
+# IDE/에디터 임시 파일
+.vscode/.ropeproject/
+.vscode/temp/
+*.swp
+*.swo
+
+# AI 도구 임시 파일
+.claude/temp/
+.claude/cache/
+.gemini/temp/
+.codex/temp/
+
 # 개발 중 백업 파일
 *~
 .#*
