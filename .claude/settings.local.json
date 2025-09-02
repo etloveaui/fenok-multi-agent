@@ -15,7 +15,14 @@
       "Bash(git push:*)",
       "Read(/home/etloveaui/.ssh/**)",
       "Read(/home/etloveaui/.ssh/**)",
-      "WebSearch"
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "Read(/home/etloveaui/.claude/**)",
+      "Read(/home/etloveaui/.claude/**)",
+      "Bash(npm run claude -- /help)",
+      "mcp__context7__resolve-library-id",
+      "mcp__sequential-thinking__sequentialthinking",
+      "mcp__playwright__browser_snapshot"
     ],
     "deny": [],
     "ask": []
