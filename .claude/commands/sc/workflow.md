@@ -1,6 +1,6 @@
 ---
 name: workflow
-description: "Generate structured implementation workflows from PRDs and feature requirements"
+description: "PRD 및 기능 요구사항에서 구조화된 구현 워크플로 생성 - PRD 분석과 기능 명세서를 통한 구현 계획, 7개 도메인 페르소나 오케스트레이션과 전체 MCP 서버 조정, 의존성 매핑과 작업 오케스트레이션을 통한 체계적 단계별 워크플로, 세션 간 지속성과 점진적 향상을 통한 포괄적 구현 전략 수립"
 category: orchestration
 complexity: advanced
 mcp-servers: [sequential, context7, magic, playwright, morphllm, serena]

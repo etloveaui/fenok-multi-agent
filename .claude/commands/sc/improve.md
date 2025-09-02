@@ -1,6 +1,6 @@
 ---
 name: improve
-description: "Apply systematic improvements to code quality, performance, and maintainability"
+description: "코드 품질, 성능 및 유지보수성에 대한 체계적 개선 적용 - 다중 페르소나 조정(아키텍트, 성능, 품질, 보안)으로 개선 유형별 전문성 제공, 프레임워크별 베스트 프랙티스 최적화, 안전한 리팩토링과 롤백 기능을 통한 기능 보존 보장된 시스템 개선"
 category: workflow
 complexity: standard
 mcp-servers: [sequential, context7]

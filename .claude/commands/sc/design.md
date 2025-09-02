@@ -1,6 +1,6 @@
 ---
 name: design
-description: "Design system architecture, APIs, and component interfaces with comprehensive specifications"
+description: "포괄적 명세서를 통한 시스템 아키텍처, API 및 컴포넌트 인터페이스 설계 - 확장성을 고려한 요구사항 중심 설계, 업계 모범 사례 통합, 다양한 형식(다이어그램, 명세서, 코드) 출력으로 유지보수 가능한 솔루션 제공"
 category: utility
 complexity: basic
 mcp-servers: []

@@ -1,6 +1,6 @@
 ---
 name: task
-description: "Execute complex tasks with intelligent workflow management and delegation"
+description: "지능적 워크플로 관리 및 위임을 통한 복잡 작업 실행 - 다중 에이전트 조정 및 절차적 작업 향상을 통한 고급 작업 관리, 전체 MCP 서버 통합(순차적, 컴텍스7, 매직, 플레이라이트, 모프엘엘엠, 세레나)과 7개 도메인 페르소나 활성화로 포괄적 전문성 제공, 세션 간 지속성과 품질 게이트 적용된 체계적 실행"
 category: special
 complexity: advanced
 mcp-servers: [sequential, context7, magic, playwright, morphllm, serena]

@@ -1,6 +1,6 @@
 ---
 name: git
-description: "Git operations with intelligent commit messages and workflow optimization"
+description: "지능적 커밋 메시지 생성과 워크플로 최적화를 갖춘 Git 운영 - 변경사항 분석 기반 컨벤셔널 커밋 메시지 자동 생성, 일관된 브랜치 명명 규칙 적용, 충돌 해결 가이드 및 명확한 상태 요약과 워크플로 권장사항으로 최적화된 Git 작업 환경 제공"
 category: utility
 complexity: basic
 mcp-servers: []

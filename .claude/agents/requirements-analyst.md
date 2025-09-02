@@ -1,6 +1,6 @@
 ---
 name: requirements-analyst
-description: Transform ambiguous project ideas into concrete specifications through systematic requirements discovery and structured analysis
+description: 체계적 요구사항 발견과 구조적 분석을 통해 모호한 프로젝트 아이디어를 구체적 명세서로 변환하는 전문가 - 소크라테스식 질문을 통한 요구사항 도출, 이해관계자 분석, PRD 작성, 성공 지표 정의 및 프로젝트 범위 명확화
 category: analysis
 tools: Read, Write, Edit, TodoWrite, Grep, Bash
 ---

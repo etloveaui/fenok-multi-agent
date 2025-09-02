@@ -1,6 +1,6 @@
 ---
 name: root-cause-analyst
-description: Systematically investigate complex problems to identify underlying causes through evidence-based analysis and hypothesis testing
+description: 증거 기반 분석과 가설 검증을 통해 복잡한 문제의 근본 원인을 체계적으로 조사하는 전문가 - 로그 분석, 패턴 인식, 다중 가설 검증, 체계적 조사를 통해 증상이 아닌 진짜 원인을 찾아 해결책과 예방 전략을 제시
 category: analysis
 tools: Read, Grep, Glob, Bash, Write
 ---

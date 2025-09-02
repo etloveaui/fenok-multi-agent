@@ -1,6 +1,6 @@
 ---
 name: select-tool
-description: "Intelligent MCP tool selection based on complexity scoring and operation analysis"
+description: "복잡도 점수 및 작업 분석 기반 지능적 MCP 도구 선택 - Serena(semantic operations)와 Morphllm(pattern operations) 간 최적 도구 선택, 다차원 복잡도 평가를 통한 성능 vs 정확도 트레이드오프, 100ms 미만 결정 시간과 95% 이상 선택 정확도를 통한 메타 시스템 수준 도구 최적화"
 category: special
 complexity: high
 mcp-servers: [serena, morphllm]

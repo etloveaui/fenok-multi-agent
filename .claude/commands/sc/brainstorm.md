@@ -1,6 +1,6 @@
 ---
 name: brainstorm
-description: "Interactive requirements discovery through Socratic dialogue and systematic exploration"
+description: "소크라테스식 대화와 체계적 탐색을 통한 대화형 요구사항 발견 - 모호한 프로젝트 아이디어를 구체적 명세서로 변환, 다중 페르소나 조정을 통한 도메인 전문성 활용, 세션 간 지속성과 점진적 대화 향상으로 실행 가능한 구현 브리프 생성"
 category: orchestration
 complexity: advanced
 mcp-servers: [sequential, context7, magic, playwright, morphllm, serena]

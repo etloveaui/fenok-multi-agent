@@ -1,6 +1,6 @@
 ---
 name: troubleshoot
-description: "Diagnose and resolve issues in code, builds, deployments, and system behavior"
+description: "코드, 빌드, 배포 및 시스템 동작 문제 진단 및 해결 - 체계적 근본 원인 분석과 가설 검증, 다영역 문제 해결(코드, 빌드, 성능, 배포), 구조화된 디버깅 방법론과 종합적 문제 분석, 사전 분석과 확인을 통한 안전한 수정 사항 적용 및 해결 효과 검증"
 category: utility
 complexity: basic
 mcp-servers: []

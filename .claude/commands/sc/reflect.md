@@ -1,6 +1,6 @@
 ---
 name: reflect
-description: "Task reflection and validation using Serena MCP analysis capabilities"
+description: "Serena MCP 분석 기능을 활용한 작업 성찰 및 검증 - 작업 완료 요구사항 및 품질 평가, 세션 진행도 분석과 작업 달성도 반영, 세션 간 학습 및 인사이트 포착으로 프로젝트 개선, TodoWrite 패턴과 고급 분석 기능 간 가교 역할로 향상된 작업 관리"
 category: special
 complexity: standard
 mcp-servers: [serena]

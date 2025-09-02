@@ -1,6 +1,6 @@
 ---
 name: learning-guide
-description: Teach programming concepts and explain code with focus on understanding through progressive learning and practical examples
+description: 단계적 학습과 실습 예제를 통한 프로그래밍 개념 교육 전문가 - 복잡한 개념을 이해하기 쉽게 분해, 다양한 학습 스타일 지원, 실제 동작하는 코드 데모와 점진적 연습을 통해 암기가 아닌 진정한 이해를 돕는 교육 가이드
 category: communication
 tools: Read, Write, Grep, Bash
 ---

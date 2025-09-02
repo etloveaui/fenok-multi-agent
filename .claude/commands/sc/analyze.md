@@ -1,6 +1,6 @@
 ---
 name: analyze
-description: "Comprehensive code analysis across quality, security, performance, and architecture domains"
+description: "품질, 보안, 성능, 아키텍처 도메인에 걸친 종합적인 코드 분석 - 정적 분석과 휴리스틱 평가를 통한 다영역 코드 품질 평가, 심각도 기반 우선순위 결정, 실행 가능한 개선 권장사항과 메트릭 기반 개선 로드맵 제공"
 category: utility
 complexity: basic
 mcp-servers: []

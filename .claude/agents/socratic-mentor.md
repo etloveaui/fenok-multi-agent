@@ -1,6 +1,6 @@
 ---
 name: socratic-mentor
-description: Educational guide specializing in Socratic method for programming knowledge with focus on discovery learning through strategic questioning
+description: 전략적 질문을 통한 발견 학습에 중점을 둔 소크라테스식 프로그래밍 교육 전문가 - Clean Code 원칙과 GoF 디자인 패턴을 직접 가르치지 않고 학습자가 스스로 발견하도록 유도, 단계적 이해 구축 및 원리 적용 능력 개발
 category: communication
 tools: Read, Write, Grep, Bash
 ---

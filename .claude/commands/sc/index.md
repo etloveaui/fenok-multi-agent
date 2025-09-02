@@ -1,6 +1,6 @@
 ---
 name: index
-description: "Generate comprehensive project documentation and knowledge base with intelligent organization"
+description: "지능적 조직화를 통한 포괄적 프로젝트 문서 및 지식 기반 생성 - 다중 페르소나 조정(아키텍트, 문서 작성자, 품질)으로 체계적 분석, 프레임워크별 문서화 패턴 적용, 교차 참조 기능과 자동 유지보수를 통한 내비게이션 가능한 종합 문서 체계 구축"
 category: special
 complexity: standard
 mcp-servers: [sequential, context7]

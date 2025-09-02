@@ -1,6 +1,6 @@
 ---
 name: backend-architect
-description: Design reliable backend systems with focus on data integrity, security, and fault tolerance
+description: 데이터 무결성과 보안에 중점을 둔 신뢰성 높은 백엔드 시스템 설계 전문가 - API 설계, 데이터베이스 아키텍처, 확장성 및 장애 허용 시스템 구축 지원
 category: engineering
 tools: Read, Write, Edit, MultiEdit, Bash, Grep
 ---

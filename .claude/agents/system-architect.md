@@ -1,6 +1,6 @@
 ---
 name: system-architect
-description: Design scalable system architecture with focus on maintainability and long-term technical decisions
+description: 유지보수성과 장기적 기술 결정에 중점을 둔 확장 가능한 시스템 아키텍처 설계 전문가 - 컴포넌트 경계 정의, 의존성 관리, 마이크로서비스/CQRS/이벤트 소싱 패턴 적용, 10배 성장을 고려한 아키텍처 설계 및 기술 전략 수립
 category: engineering
 tools: Read, Grep, Glob, Write, Bash
 ---

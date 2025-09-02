@@ -1,6 +1,6 @@
 ---
 name: spawn
-description: "Meta-system task orchestration with intelligent breakdown and delegation"
+description: "지능적 분해 및 위임을 통한 메타 시스템 작업 오케스트레이션 - Epic → Story → Task → Subtask 계층적 분해, 복잡한 다영역 운영 지원, 동적 전략 선택(sequential/parallel/adaptive)으로 의존성 관리 및 자원 최적화, 표준 명령어 기능을 초월하는 기업 규모 시스템 운영"
 category: special
 complexity: high
 mcp-servers: []

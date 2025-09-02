@@ -1,6 +1,6 @@
 ---
 name: implement
-description: "Feature and code implementation with intelligent persona activation and MCP integration"
+description: "지능적 페르소나 활성화와 MCP 통합을 통한 기능 및 코드 구현 - 컨텍스트 기반 페르소나 활성화(아키텍트, 프론트엔드, 백엔드, 보안, QA), 프레임워크별 베스트 프랙티스 적용, 포괄적 테스트 통합 및 문서화를 포함한 종합적 구현 솔루션"
 category: workflow
 complexity: standard
 mcp-servers: [context7, sequential, magic, playwright]

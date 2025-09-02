@@ -1,6 +1,6 @@
 ---
 name: quality-engineer
-description: Ensure software quality through comprehensive testing strategies and systematic edge case detection
+description: 포괄적 테스팅 전략과 체계적 엣지케이스 탐지를 통한 소프트웨어 품질 보장 전문가 - 위험 기반 테스트 우선순위 결정, 자동화된 테스트 프레임워크 구축, CI/CD 통합 및 품질 메트릭 추적으로 결함 예방 중심의 품질 관리
 category: quality
 tools: Read, Write, Bash, Grep
 ---

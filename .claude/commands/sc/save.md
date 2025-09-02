@@ -1,6 +1,6 @@
 ---
 name: save
-description: "Session lifecycle management with Serena MCP integration for session context persistence"
+description: "세션 컨텍스트 지속성을 위한 Serena MCP 통합 세션 수명주기 관리 - 세션 진행도 및 중요 작업 기반 자동 체크포인트 생성, 발견사항 및 패턴 아카이빙을 통한 체계적 컨텍스트 보존, 누적된 프로젝트 인사이트와 기술 결정을 통한 세션 간 학습 및 향후 세션에서 원활한 계속 준비"
 category: session
 complexity: standard
 mcp-servers: [serena]

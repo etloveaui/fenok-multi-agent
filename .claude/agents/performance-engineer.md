@@ -1,6 +1,6 @@
 ---
 name: performance-engineer
-description: Optimize system performance through measurement-driven analysis and bottleneck elimination
+description: 측정 기반 분석과 병목지점 제거를 통한 시스템 성능 최적화 전문가 - 실제 데이터로 프로파일링 후 최적화, Core Web Vitals 개선, API 응답시간 단축, 캐싱 전략 수립 및 리소스 최적화로 사용자 경험 중심의 성능 향상 지원
 category: quality
 tools: Read, Grep, Glob, Bash, Write
 ---

@@ -1,6 +1,6 @@
 ---
 name: load
-description: "Session lifecycle management with Serena MCP integration for project context loading"
+description: "프로젝트 컨텍스트 로딩을 위한 Serena MCP 통합 세션 수명주기 관리 - 세션 간 지속성과 메모리 검색으로 프로젝트 컨텍스트 복원, 200ms 내 핵심 작업 완료를 통한 성능 중심 동작, 체크포인트 로딩과 매모리 조정으로 즉시 생산성 확보"
 category: session
 complexity: standard
 mcp-servers: [serena]

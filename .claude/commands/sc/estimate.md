@@ -1,6 +1,6 @@
 ---
 name: estimate
-description: "Provide development estimates for tasks, features, or projects with intelligent analysis"
+description: "지능적 분석을 통한 작업, 기능 또는 프로젝트 개발 추정 - 다중 페르소나 조정(아키텍트, 성능, 프로젝트 관리자)으로 포괄적 복잡도 분석, 프레임워크별 벤치마크 및 히스토리컬 데이터 기반 추정, 신뢰구간과 위험 평가를 포함한 상세 분석 및 정확도 추적"
 category: special
 complexity: standard
 mcp-servers: [sequential, context7]

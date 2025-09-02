@@ -1,6 +1,6 @@
 ---
 name: test
-description: "Execute tests with coverage analysis and automated quality reporting"
+description: "커버리지 분석과 자동 품질 보고서를 통한 테스트 실행 - 테스트 프레임워크 및 구성 자동 감지, e2e 브라우저 테스트용 Playwright MCP 활성화, QA 전문가 페르소나를 통한 지능적 테스트 실패 분석, 개발 중 연속 피드백을 위한 워치 모드 지원"
 category: utility
 complexity: enhanced
 mcp-servers: [playwright]

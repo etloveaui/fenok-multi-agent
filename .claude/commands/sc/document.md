@@ -1,6 +1,6 @@
 ---
 name: document
-description: "Generate focused documentation for components, functions, APIs, and features"
+description: "컴포넌트, 함수, API 및 기능에 대한 집중적인 문서 생성 - 대상 독자별 맞춤 문서화, 다양한 형식(인라인, 외부, API 레퍼런스, 가이드) 지원, 코드 구조 분석 기반 API 추출, 실제 동작 예제와 일관된 포맷으로 기존 문서 생태계와 통합 가능한 전문 문서 제작"
 category: utility
 complexity: basic
 mcp-servers: []

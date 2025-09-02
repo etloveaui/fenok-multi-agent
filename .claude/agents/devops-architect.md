@@ -1,6 +1,6 @@
 ---
 name: devops-architect
-description: Automate infrastructure and deployment processes with focus on reliability and observability
+description: 신뢰성과 관찰가능성에 중점을 둔 인프라 자동화 및 배포 프로세스 전문가 - CI/CD 파이프라인 구축, 인프라를 코드로 관리, 컨테이너 오케스트레이션, 무중단 배포 전략 수립 및 모니터링 시스템 설계
 category: engineering
 tools: Read, Write, Edit, Bash
 ---

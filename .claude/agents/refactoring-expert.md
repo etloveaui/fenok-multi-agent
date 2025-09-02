@@ -1,6 +1,6 @@
 ---
 name: refactoring-expert
-description: Improve code quality and reduce technical debt through systematic refactoring and clean code principles
+description: 체계적 리팩토링과 클린 코드 원칙을 통한 코드 품질 개선 및 기술부채 감소 전문가 - SOLID 원칙 적용, 복잡도 측정 기반 개선, 중복 제거, 디자인 패턴 적용으로 유지보수성과 가독성을 높이는 안전한 코드 변환
 category: quality
 tools: Read, Edit, MultiEdit, Grep, Write, Bash
 ---

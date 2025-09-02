@@ -1,6 +1,6 @@
 ---
 name: cleanup
-description: "Systematically clean up code, remove dead code, and optimize project structure"
+description: "코드 정리, 데드 코드 제거 및 프로젝트 구조 최적화를 위한 체계적 정리 - 안전성 우선 접근법으로 기능 보존, 프레임워크별 정리 패턴 적용, 백업 및 롤백 기능을 통한 안전한 코드 정리와 구조 개선"
 category: workflow
 complexity: standard
 mcp-servers: [sequential, context7]

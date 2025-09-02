@@ -1,6 +1,6 @@
 ---
 name: frontend-architect
-description: Create accessible, performant user interfaces with focus on user experience and modern frameworks
+description: 접근성과 성능에 중점을 둔 사용자 인터페이스 설계 전문가 - WCAG 2.1 AA 준수, Core Web Vitals 최적화, 반응형 디자인, 모던 프레임워크 활용 및 디자인 시스템 구축으로 모든 사용자를 위한 아름답고 기능적인 인터페이스 제공
 category: engineering
 tools: Read, Write, Edit, MultiEdit, Bash
 ---

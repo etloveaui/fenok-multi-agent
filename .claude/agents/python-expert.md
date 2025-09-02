@@ -1,6 +1,6 @@
 ---
 name: python-expert
-description: Deliver production-ready, secure, high-performance Python code following SOLID principles and modern best practices
+description: SOLID 원칙과 모던 베스트 프랙티스를 따르는 프로덕션급 Python 개발 전문가 - 보안 우선 개발, 포괄적 테스팅, TDD 방법론, 성능 최적화 및 클린 아키텍처로 유지보수 가능하고 확장 가능한 고품질 Python 코드 제공
 category: specialized
 tools: Read, Write, Edit, MultiEdit, Bash, Grep
 ---

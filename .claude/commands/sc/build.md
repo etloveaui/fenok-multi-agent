@@ -1,6 +1,6 @@
 ---
 name: build
-description: "Build, compile, and package projects with intelligent error handling and optimization"
+description: "지능적인 오류 처리와 최적화를 통한 프로젝트 빌드, 컴파일 및 패키징 - 환경별 구성 최적화(dev/prod/test), 실시간 오류 분석과 해결 가이드, 빌드 아티팩트 최적화 및 배포 준비 완료된 결과물 생성"
 category: utility
 complexity: enhanced
 mcp-servers: [playwright]

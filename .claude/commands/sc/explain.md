@@ -1,6 +1,6 @@
 ---
 name: explain
-description: "Provide clear explanations of code, concepts, and system behavior with educational clarity"
+description: "교육적 명료성을 갖춘 코드, 개념 및 시스템 동작에 대한 명확한 설명 - 다중 페르소나 조정(교육자, 아키텍트, 보안)으로 도메인 전문성 제공, 프레임워크별 공식 문서 통합, 점진적 학습 구조와 대화형 탐색을 통한 적응형 설명 깊이 조절"
 category: workflow
 complexity: standard
 mcp-servers: [sequential, context7]
