@@ -34,31 +34,70 @@ fenok-multi-agent/
 └── README.md          # 메인 문서
 ```
 
-## 🗺️ 향후 개발 계획
+## 🗺️ 개발 로드맵 (유동적 계획)
 
-### Phase 2: 고급 Claude 통합 (예정)
-- 고급 Claude 런처 시스템
-- 세션 관리 및 로깅 시스템
-- 환경변수 격리 및 자동화
-- PATH 설정 자동화
-- VS Code 작업 통합
+> **⚠️ 중요**: 이 계획은 유동적이며 각 단계 완료 후 재검토하여 수정됩니다. 확정사항은 없으며 모든 것이 유연하게 조정 가능합니다.
 
-### Phase 3: 멀티 AI 에이전트 지원 (예정)
-- **Gemini** 통합
-  - Google Gemini CLI 설치 및 설정
-  - configs/gemini/ 디렉터리 구성
-  - API 키 관리 시스템
+### Phase 2: SuperClaude Framework 통합 (진행 예정)
+**목표**: Claude Code를 전문 개발 도구로 변환
+- ✅ SuperClaude Framework 설치 가이드 완성
+- 🔄 SuperClaude 설치 및 테스트
+- 📋 19개 전문 명령어 활용
+- 📋 9개 인지 페르소나 적용
 
-- **Codex/GPT** 통합  
-  - OpenAI API 연동
-  - configs/codex/ 디렉터리 구성
-  - 인증 토큰 관리
+### Phase 2.5: 한글 SuperClaude 패치 적용 (예정)
+**소스**: 기존 dev-agents 프로젝트의 한글 패치 + 추가 개선
+- 📋 기존 한글 패치 검토 및 적용 (디스크립션 한글화)
+- 📋 한국어 명령어 및 응답 최적화
+- 📋 한국어 페르소나 추가 및 상세 설명
+- 📋 사용자가 이해하기 쉬운 한국어 가이드 작성
+- 📋 복잡한 개념의 한국어 설명 및 예제 추가
 
-### Phase 4: 통합 대시보드 (예정)
-- 웹 기반 관리 인터페이스
-- AI 에이전트 상태 모니터링
-- 사용량 통계 및 분석
-- 설정 중앙화 관리
+### Phase 3: Claude Code Templates 적용 (예정) 
+**소스**: https://github.com/davila7/claude-code-templates
+- 📋 400+ 컴포넌트 라이브러리 활용
+- 📋 전문 AI 에이전트 설정
+- 📋 프레임워크별 최적화 템플릿
+- 📋 자동화 훅 및 MCP 서버 연동
+
+### Phase 4: OpenAI Codex 통합 (예정)
+**소스**: https://github.com/openai/codex (최신 v0.27.0)
+- 📋 Codex CLI 로컬 설치 (Rust 기반)
+- 📋 Codex IDE 통합
+- 📋 Codex MCP 서버 연동  
+- 📋 configs/codex/ 디렉터리 구성
+- 📋 로그인 방식 인증 (API 키 불필요)
+
+### Phase 5: Google Gemini 통합 (예정)
+**소스**: Google Gemini CLI + SuperGemini Framework
+- 📋 Gemini CLI 설치
+- 📋 SuperGemini Framework 적용 (pip install SuperGemini)
+- 📋 `/sg:*` 명령어 시스템 (10+ 전문 명령어)
+- 📋 Gemini IDE (VS Code 실행 가능) 로컬 관리 구성
+- 📋 configs/gemini/ 디렉터리 구성
+- 📋 로그인 방식 인증 (API 키 불필요)
+
+### Phase 6: 기존 프로젝트 장점 통합 (예정)
+**소스**: multi-agent-workspace, dev-agents 프로젝트
+- 📋 기존 프로젝트 분석 및 좋은 점 추출
+- 📋 안정성 향상 방안 적용
+- 📋 시스템 최적화 기법 도입
+- 📋 검증된 아키텍처 패턴 적용
+
+### Phase 7: VS Code 통합 및 프로젝트 관리 시스템 (예정)
+**핵심**: VS Code를 통한 모든 에이전트 작업
+- 📋 VS Code 확장으로 모든 에이전트 통합
+- 📋 에이전트별 VS Code 작업(Tasks) 설정
+- 📋 프로젝트 폴더 구조 설계
+  - `projects/` - 개별 프로젝트들 (독립 Git 관리)
+  - `workspace/` - 업무용 작업 폴더 (문서검토, 개발 등)
+- 📋 VS Code에서 에이전트 선택 인터페이스
+
+### Phase 8: 통합 관리 시스템 (최종 목표) 
+- 📋 통합 에이전트 선택 인터페이스
+- 📋 크로스 플랫폼 설정 동기화  
+- 📋 모니터링 및 분석 대시보드
+- 📋 자동 환경 구축 시스템
 
 ## 🔧 기술 스택
 
@@ -68,10 +107,15 @@ fenok-multi-agent/
 - **패키지 관리**: npm
 - **버전 관리**: Git
 
-### AI 도구들
-- **Claude Code**: Anthropic의 AI 코딩 어시스턴트 (현재)
-- **Gemini**: Google AI (계획)
-- **Codex**: OpenAI (계획)
+### AI 도구들 (모두 로그인 방식 - API 키 불필요)
+- **Claude Code**: Anthropic의 AI 코딩 어시스턴트 (✅ 현재)
+  - SuperClaude Framework (📋 계획)
+  - Claude Code Templates (📋 계획)
+- **OpenAI Codex**: OpenAI의 로컬 코딩 에이전트 (📋 계획)
+  - 최신 v0.27.0 (Rust 기반)
+  - Codex CLI, IDE, MCP 통합
+- **Google Gemini**: Google AI (📋 계획)
+  - Gemini CLI + SuperGemini Framework
 
 ### 개발 환경
 - **편집기**: VS Code (Remote-WSL)

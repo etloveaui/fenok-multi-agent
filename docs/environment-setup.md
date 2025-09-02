@@ -34,10 +34,15 @@
 
 ### API 키 및 인증 토큰 (중요!)
 ```
-configs/*/api_keys      # AI 서비스 API 키들 - 백업 필요
-configs/*/auth_tokens   # 인증 토큰들 - 백업 필요
+configs/*/api_keys      # AI 서비스 API 키들 - 백업 필요 (일부 서비스)
+configs/*/auth_tokens   # 인증 토큰들 - 백업 필요 (일부 서비스)
 ```
 **⚠️ 해결방법**: 클라우드 비밀번호 관리자에 저장 권장
+
+**🔑 중요 참고사항**: 
+- **Claude, Gemini, Codex 등 대부분의 AI 에이전트**는 **API 키를 사용하지 않습니다**
+- **로그인 방식**으로 작동하므로 별도 API 키 관리 불필요
+- OAuth 인증을 통한 안전한 로그인 시스템 사용
 
 ### 세션 파일 (백업 불필요)
 ```
@@ -70,9 +75,11 @@ cp ~/.ssh/id_ed25519* /mnt/c/Users/$(cmd.exe /c "echo %USERNAME%" | tr -d '\r')/
 ```
 
 ### 3단계: AI 서비스 설정
-- **Claude Code**: `npm run claude`로 실행하면 자동 로그인 프로세스 시작
-- **Gemini**: (향후 추가 시) API 키 설정 필요
-- **Codex**: (향후 추가 시) 인증 토큰 설정 필요
+- **Claude Code**: `npm run claude`로 실행하면 자동 OAuth 로그인 프로세스 시작
+- **Gemini**: (향후 추가 시) 로그인 방식으로 인증
+- **Codex**: (향후 추가 시) 로그인 방식으로 인증
+
+**💡 참고**: 모든 AI 에이전트는 API 키가 아닌 **로그인 방식**을 사용합니다
 
 ### 4단계: 동작 확인
 ```bash
@@ -96,8 +103,10 @@ git add . && git commit -m "test" && git push
 
 ### ❌ Git에 절대 커밋하면 안 되는 것들
 - SSH 개인 키 (`id_ed25519`) - 보안상 중요
-- API 키 (`api_keys`) - 💰 요금 발생 위험
-- 인증 토큰 (`auth_tokens`) - 💰 요금 발생 위험
+- API 키 (`api_keys`) - 💰 요금 발생 위험 (일부 서비스만 해당)
+- 인증 토큰 (`auth_tokens`) - 💰 요금 발생 위험 (일부 서비스만 해당)
+
+**📝 참고**: Claude, Gemini, Codex 등은 로그인 방식이므로 API 키 관리 불필요
 
 ### 🗑️ 백업할 필요 없는 것들 (자동 재생성)
 - 세션 파일 (`.session`, `session-*`) - 로그인하면 자동 생성

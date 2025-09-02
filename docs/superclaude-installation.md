@@ -1,8 +1,10 @@
-# SuperClaude 설치 가이드
+# SuperClaude Framework 설치 가이드
 
-## 🎯 SuperClaude란?
+## 🎯 SuperClaude Framework란?
 
-SuperClaude는 기본 Claude Code를 확장한 고급 기능을 제공하는 도구입니다. 현재 fenok-multi-agent 환경에서는 Claude Code가 정상적으로 설치되고 설정되어 있어야 SuperClaude를 추가로 설치할 수 있습니다.
+SuperClaude Framework는 Claude Code를 전문 개발 도구로 변환하는 설정 프레임워크입니다. 19개의 전문 명령어와 9개의 인지 페르소나를 제공하여 Claude Code를 구조화된 개발 파트너로 만들어줍니다.
+
+**중요**: SuperClaude는 **API 키를 사용하지 않습니다**. 모든 AI 에이전트(Claude, Gemini, Codex)는 로그인 방식으로 작동합니다.
 
 ## ✅ 사전 요구사항
 
@@ -15,286 +17,245 @@ cd /home/etloveaui/workspace/fenok-multi-agent
 npm run claude -- --version
 ```
 
-**성공 조건**: Claude Code 버전이 정상적으로 출력되어야 함
+**성공 조건**: Claude Code가 정상적으로 설치되어 있어야 함
 
-### 2. Claude Code 설정 상태 확인
+### 2. Python 환경 확인 (SuperClaude Framework 설치용)
 ```bash
-# Claude 설정 상태 점검
-ls -la .claude/settings.local.json
+# Python 버전 확인 (3.8+ 필요)
+python3 --version
 
-# API 키 설정 여부 확인 (실제 키 값 노출 없이)
-grep -q "sk-ant-" .claude/settings.local.json && echo "✅ API 키 설정됨" || echo "❌ API 키 미설정"
+# pip 또는 pipx 설치 확인
+pipx --version || pip3 --version
 ```
 
-## 🚀 SuperClaude 설치 방법
+## 🚀 SuperClaude Framework 설치 방법
 
-### Option 1: npm을 통한 로컬 설치 (권장)
+### Option 1: Quick Installation (권장)
 ```bash
-# fenok-multi-agent 프로젝트 루트에서
-npm install @anthropic-ai/superclaude
+# 원스톱 설치 (자동 백업 포함)
+git clone https://github.com/SuperClaude-Org/SuperClaude_Framework.git
+cd SuperClaude_Framework
+./install.sh
 
-# package.json에 스크립트 추가
-npm pkg set scripts.superclaude="superclaude"
+# 커스텀 디렉터리 설치
+./install.sh --dir ~/.claude-custom
 
-# 설치 확인
-npm run superclaude -- --version
+# 기존 설치 업데이트
+./install.sh --update
+
+# 설치 미리보기 (실제 설치 안함)
+./install.sh --dry-run
 ```
 
-### Option 2: 글로벌 설치 (비권장)
+### Option 2: pipx를 통한 설치 (Python 격리)
 ```bash
-# WSL2에서 글로벌 설치 (환경 이식성 저해)
-npm install -g @anthropic-ai/superclaude
+# pipx 설치 (없는 경우)
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
 
-# 설치 확인
-superclaude --version
+# SuperClaude v4 설치
+pipx install SuperClaude
+pipx upgrade SuperClaude
+SuperClaude install
 ```
 
-## ⚙️ SuperClaude 설정
-
-### 1. 설정 디렉터리 준비
+### Option 3: uv를 통한 현대적 설치
 ```bash
-# SuperClaude 전용 설정 디렉터리 생성
-mkdir -p configs/superclaude/{settings,templates,scripts}
+# uv 설치 (고성능 Python 패키지 매니저)
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
-# 기본 설정 파일 생성
-touch configs/superclaude/settings/team.json
-touch configs/superclaude/settings/local.json.template
+# SuperClaude 설치
+git clone https://github.com/SuperClaude-Org/SuperClaude_Framework.git
+cd SuperClaude_Framework
+uv sync
 ```
 
-### 2. 팀 공유 설정 파일
+## 📁 설치 후 구조
+
+SuperClaude Framework 설치 후 `~/.claude/` 디렉터리에 다음 파일들이 생성됩니다:
+
 ```bash
-cat > configs/superclaude/settings/team.json << 'EOF'
-{
-  "version": "1.0",
-  "features": {
-    "advancedMode": true,
-    "multiAgent": false,
-    "customPrompts": true,
-    "sessionManagement": true
-  },
-  "integrations": {
-    "claudeCode": true,
-    "vscode": true,
-    "jupyter": false
-  },
-  "ui": {
-    "theme": "dark",
-    "compactMode": false,
-    "showAdvancedOptions": true
-  }
-}
-EOF
+~/.claude/
+├── CLAUDE.md          # 메인 프레임워크 진입점
+├── COMMANDS.md        # 사용 가능한 슬래시 명령어들
+├── FLAGS.md           # 명령어 플래그 및 옵션
+├── PERSONAS.md        # 스마트 페르소나 시스템
+└── commands/          # 16개 개별 명령어 정의
+    ├── implement.md
+    ├── analyze.md
+    ├── troubleshoot.md
+    └── ... (13개 더)
 ```
 
-### 3. 개인 설정 템플릿
+## ⚙️ SuperClaude Framework 기능
+
+### 🤖 19개 전문 명령어
+- `/sc:implement` - 구현 계획 수립
+- `/sc:analyze` - 코드 분석
+- `/sc:troubleshoot` - 문제 해결
+- `/sc:brainstorm` - 아이디어 브레인스토밍
+- 기타 15개 전문 명령어
+
+### 👥 9개 인지 페르소나
+- AI 전문가들이 각자의 전문 분야에서 조언
+- 상황에 맞는 적절한 페르소나 자동 선택
+- 구조화된 개발 파트너 역할
+
+### 🔧 MCP 서버 통합 (선택사항)
+- Model Context Protocol 서버 연동 지원
+- 확장된 컨텍스트 관리
+
+## 🎯 사용 방법
+
+### 첫 시작
 ```bash
-cat > configs/superclaude/settings/local.json.template << 'EOF'
-{
-  "apiKeys": {
-    "anthropic": "your-api-key-here",
-    "openai": "optional-openai-key-here"
-  },
-  "user": {
-    "name": "Your Name",
-    "preferences": {
-      "defaultAgent": "claude",
-      "autoSave": true,
-      "notifications": true
-    }
-  },
-  "advanced": {
-    "debugMode": false,
-    "experimentalFeatures": false,
-    "customEndpoints": {}
-  }
-}
-EOF
+# Claude Code 실행
+npm run claude
+
+# SuperClaude 첫 경험
+# Claude Code 내에서:
+/sc:brainstorm
+
+# 도움말 확인
+/help
 ```
 
-### 4. 개인 설정 초기화
+### 주요 명령어 예시
 ```bash
-# 템플릿을 복사하여 개인 설정 생성
-cp configs/superclaude/settings/local.json.template configs/superclaude/settings/local.json
+# Claude Code 내에서 사용:
 
-# 설정 파일 편집 (API 키 등 개인 정보 입력)
-nano configs/superclaude/settings/local.json
-```
+# 프로젝트 구현 계획
+/sc:implement "사용자 인증 시스템 구축"
 
-## 🔧 SuperClaude 래퍼 스크립트
+# 코드 분석
+/sc:analyze "현재 코드베이스의 성능 이슈"
 
-### 1. 실행 스크립트 생성
-```bash
-cat > bin/superclaude << 'EOF'
-#!/bin/bash
+# 문제 해결
+/sc:troubleshoot "Git 커밋이 안되는 문제"
 
-# SuperClaude 실행 래퍼 스크립트
-set -e
-
-# 환경 로드 (기존 fenok-multi-agent 환경 활용)
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
-
-# 설정 경로 설정
-export SUPERCLAUDE_CONFIG_PATH="$PROJECT_ROOT/configs/superclaude"
-
-# 설정 파일 확인
-if [ ! -f "$SUPERCLAUDE_CONFIG_PATH/settings/local.json" ]; then
-    echo "❌ SuperClaude 개인 설정이 없습니다."
-    echo "📝 다음 명령어로 설정을 생성하세요:"
-    echo "   cp configs/superclaude/settings/local.json.template configs/superclaude/settings/local.json"
-    echo "   그 후 API 키를 설정하세요."
-    exit 1
-fi
-
-# SuperClaude 실행 방식 결정
-if [ -f "$PROJECT_ROOT/node_modules/.bin/superclaude" ]; then
-    echo "🚀 Starting SuperClaude (local installation)..."
-    exec "$PROJECT_ROOT/node_modules/.bin/superclaude" "$@"
-elif command -v superclaude >/dev/null 2>&1; then
-    echo "🚀 Starting SuperClaude (global installation)..."
-    exec superclaude "$@"
-else
-    echo "❌ SuperClaude가 설치되지 않았습니다."
-    echo "📦 다음 명령어로 설치하세요:"
-    echo "   npm install @anthropic-ai/superclaude"
-    exit 1
-fi
-EOF
-
-chmod +x bin/superclaude
-```
-
-### 2. package.json 스크립트 추가
-```bash
-# package.json에 SuperClaude 스크립트 추가
-npm pkg set scripts.superclaude="./bin/superclaude"
-
-# 설정 관리 스크립트도 추가
-npm pkg set scripts.superclaude-config="./bin/superclaude-config"
-```
-
-## 📋 .gitignore 업데이트
-
-SuperClaude 관련 개인 설정을 Git에서 제외하기 위해 .gitignore 업데이트:
-
-```bash
-cat >> .gitignore << 'EOF'
-
-# SuperClaude 개인 설정
-configs/superclaude/settings/local.json
-configs/superclaude/sessions/
-configs/superclaude/cache/
-EOF
+# 아이디어 브레인스토밍  
+/sc:brainstorm "React 앱 성능 최적화 방법"
 ```
 
 ## ✅ 설치 확인
 
-### 1. 기본 동작 테스트
+### 1. 설치 파일 확인
 ```bash
-# SuperClaude 버전 확인
-npm run superclaude -- --version
+# SuperClaude 설치 디렉터리 확인
+ls -la ~/.claude/
 
-# 설정 상태 확인
-npm run superclaude -- --config-status
+# 주요 파일들이 존재하는지 확인
+ls ~/.claude/CLAUDE.md ~/.claude/COMMANDS.md ~/.claude/PERSONAS.md
 
-# 간단한 질문 테스트
-echo "SuperClaude 설치 테스트" | npm run superclaude
+# 명령어 디렉터리 확인
+ls ~/.claude/commands/
 ```
 
-### 2. 기존 Claude Code와 연동 확인
+### 2. Claude Code에서 SuperClaude 기능 테스트
 ```bash
-# Claude Code가 정상 작동하는지 확인
-npm run claude -- --version
+# Claude Code 실행
+npm run claude
 
-# 두 도구가 동시에 사용 가능한지 확인
-npm run claude -- "Hello from Claude Code"
-npm run superclaude -- "Hello from SuperClaude"
-```
-
-## 🎯 사용 방법
-
-### 기본 사용법
-```bash
-# 대화형 모드
-npm run superclaude
-
-# 한 줄 질문
-npm run superclaude -- "질문 내용"
-
-# 파일 입력
-npm run superclaude -- < input.txt
-
-# 고급 옵션
-npm run superclaude -- --advanced-mode --session mysession
-```
-
-### 설정 관리
-```bash
-# 설정 상태 확인
-npm run superclaude -- --config-status
-
-# 설정 백업
-cp configs/superclaude/settings/local.json configs/superclaude/settings/local.json.backup
-
-# 설정 초기화
-cp configs/superclaude/settings/local.json.template configs/superclaude/settings/local.json
+# Claude Code 내에서 SuperClaude 명령어 테스트:
+# /help                     # 도움말 확인
+# /sc:brainstorm           # 첫 SuperClaude 경험
+# /sc:implement            # 구현 계획 테스트
 ```
 
 ## 🚨 트러블슈팅
 
-### 문제 1: "SuperClaude not found" 오류
+### 문제 1: 설치 후 명령어가 안 보이는 경우
 ```bash
-# 해결방법 1: 로컬 설치 확인
-npm list @anthropic-ai/superclaude
+# ~/.claude/ 디렉터리 확인
+ls -la ~/.claude/
 
-# 해결방법 2: 재설치
-npm install @anthropic-ai/superclaude
-
-# 해결방법 3: 실행 권한 확인
-chmod +x bin/superclaude
+# 수동으로 Claude Code 재시작
+npm run claude
+# Claude Code 내에서 /help 입력하여 새 명령어 확인
 ```
 
-### 문제 2: 설정 파일 오류
+### 문제 2: Python 환경 충돌
 ```bash
-# JSON 형식 확인
-jq . configs/superclaude/settings/local.json
+# pipx 사용 (권장)
+pipx install SuperClaude
+pipx upgrade SuperClaude
 
-# 설정 파일 초기화
-cp configs/superclaude/settings/local.json.template configs/superclaude/settings/local.json
+# 또는 사용자 디렉터리 설치
+pip install --user SuperClaude
 ```
 
-### 문제 3: API 키 관련 오류
+### 문제 3: v3에서 v4 업그레이드 시 충돌
 ```bash
-# API 키 설정 확인
-grep "your-api-key-here" configs/superclaude/settings/local.json
-# 위 명령어 결과가 있으면 아직 API 키 미설정
+# v3 관련 파일 정리 (v4 설치 전)
+rm -f ~/.claude/*.md ~/.claude/*.json
+rm -rf ~/.claude/commands/
 
-# API 키 설정
-nano configs/superclaude/settings/local.json
+# v4 재설치
+pipx install SuperClaude
+SuperClaude install
 ```
+
+## 🔗 관련 프레임워크: SuperGemini Framework
+
+SuperClaude와 유사하게 **Gemini CLI**를 위한 SuperGemini Framework도 있습니다:
+
+### SuperGemini Framework 설치
+```bash
+# Gemini CLI 먼저 설치 필요
+# 그 후 SuperGemini Framework 설치
+pip install SuperGemini
+
+# 설치 확인 및 컴포넌트 설치
+SuperGemini --version
+SuperGemini install --quick --yes
+```
+
+### SuperGemini 주요 명령어
+- `/sg:implement` - 구현 계획
+- `/sg:analyze` - 코드 분석  
+- `/sg:troubleshoot` - 문제 해결
+- `/sg:improve` - 코드 개선
+- `/sg:test` - 테스트 생성
+- 기타 10+ 전문 명령어
 
 ## 🎉 성공 확인
 
-모든 단계가 완료되면 다음과 같이 확인할 수 있습니다:
+다음 체크리스트로 설치 상태를 확인하세요:
 
 ```bash
-echo "🎯 SuperClaude 설치 확인 체크리스트"
-echo "=================================="
+echo "🎯 SuperClaude Framework 설치 확인"
+echo "================================="
 
-# 1. SuperClaude 실행 가능
-npm run superclaude -- --version && echo "✅ SuperClaude 실행 가능" || echo "❌ SuperClaude 실행 불가"
+# 1. 설치 디렉터리 확인
+[ -d ~/.claude ] && echo "✅ ~/.claude 디렉터리 존재" || echo "❌ 설치 디렉터리 없음"
 
-# 2. 설정 파일 존재
-[ -f configs/superclaude/settings/local.json ] && echo "✅ 설정 파일 존재" || echo "❌ 설정 파일 없음"
+# 2. 주요 파일 확인
+[ -f ~/.claude/CLAUDE.md ] && echo "✅ 메인 설정 파일 존재" || echo "❌ 메인 설정 파일 없음"
 
-# 3. API 키 설정 확인
-grep -v "your-api-key-here" configs/superclaude/settings/local.json > /dev/null && echo "✅ API 키 설정됨" || echo "❌ API 키 미설정"
+# 3. 명령어 디렉터리 확인
+[ -d ~/.claude/commands ] && echo "✅ 명령어 디렉터리 존재" || echo "❌ 명령어 디렉터리 없음"
 
-# 4. 기존 Claude Code 호환성
-npm run claude -- --version > /dev/null && echo "✅ Claude Code 호환성 유지" || echo "❌ Claude Code 문제"
+# 4. Claude Code 연동 확인
+echo "📝 Claude Code에서 다음 명령어로 테스트:"
+echo "   npm run claude"
+echo "   그 후: /help 또는 /sc:brainstorm 입력"
 
 echo ""
-echo "🚀 모든 항목이 ✅ 표시되면 설치 완료!"
+echo "🚀 모든 ✅ 항목이 표시되면 설치 완료!"
+echo "💡 Claude Code에서 /sc:brainstorm으로 첫 경험을 시작하세요!"
 ```
 
-이제 SuperClaude를 사용할 준비가 완료되었습니다!
+## 🔄 정기 업데이트
+
+SuperClaude Framework는 지속적으로 업데이트됩니다:
+
+```bash
+# 정기 업데이트 확인 및 설치
+pipx upgrade SuperClaude
+SuperClaude install --update
+
+# 또는 재설치로 최신 기능 적용
+SuperClaude install --quick --yes
+```
+
+이제 Claude Code가 19개 전문 명령어와 9개 인지 페르소나를 가진 강력한 개발 도구로 변신했습니다! 🎉

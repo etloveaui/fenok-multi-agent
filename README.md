@@ -145,13 +145,17 @@ ssh -T git@github.com
 - [Git UI 도구 호환성 가이드](docs/git-ui-setup.md) - 소스트리, GitHub Desktop 등 설정
 - [VS Code Git 설정 가이드](docs/vscode-git-setup.md) - WSL2 환경에서 VS Code Git 사용법  
 - [환경 이식성 가이드](docs/environment-setup.md) - 새 PC에서 완전 복원하는 방법
-- [SuperClaude 설치 가이드](docs/superclaude-installation.md) - 고급 Claude 도구 설치 방법
+
+### AI 에이전트 설치 가이드
+- [SuperClaude 설치 가이드](docs/superclaude-installation.md) - Claude Code 전문 도구 (19개 명령어 + 9개 페르소나)
+- [Codex 설치 가이드](docs/codex-installation-guide.md) - OpenAI 로컬 코딩 에이전트
 
 ### 개발 전략
 - [로컬 설치 전략](docs/local-installation-strategy.md) - CLI/IDE 도구들의 로컬 설치 철학
+- [유연한 개발 전략](docs/flexible-development-strategy.md) - 적응적이고 유연한 개발 방법론
 
 ### 프로젝트 정보
-- [프로젝트 로드맵](docs/project-roadmap.md) - 개발 계획 및 향후 방향성
+- [프로젝트 로드맵](docs/project-roadmap.md) - 개발 계획 및 향후 방향성 (유동적 계획)
 - [개발 기록](docs/development-history.md) - 주요 이슈 해결 과정 및 학습 내용
 
 ## 📝 개발 노트
