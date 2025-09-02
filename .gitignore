@@ -1,36 +1,24 @@
-# WSL 관련
-.wslconfig
-
 # Node.js
 node_modules/
 npm-debug.log*
-.npm
+package-lock.json  # 제거하여 의존성 고정
 
-# Claude 개인 설정 (로컬 프로젝트)
-.claude/settings.json
+# 개인 보안 파일만 제외 (API 키, 세션 등)
+configs/*/api_keys
+configs/*/*.session
+configs/*/auth_tokens
 .claude/session-*
 .claude/*.log
-configs/claude/settings.local.json
-configs/claude/.claude_session
-configs/claude/api_keys
-
-# Gemini 개인 설정  
-configs/gemini/settings.local.json
-configs/gemini/.gemini_session
-configs/gemini/api_keys
-
-# Codex 개인 설정
-configs/codex/settings.local.json
-configs/codex/.codex_session
-configs/codex/auth_tokens
 
 # OS 관련
 .DS_Store
 Thumbs.db
 
-# IDE 관련
-# .vscode/settings.json
-.idea/
+# IDE 개인 설정
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/usage.statistics.xml
+.idea/shelf/
 
 # 로그 파일
 *.log
@@ -39,3 +27,9 @@ logs/
 # 임시 파일
 *.tmp
 *.temp
+*.bak
+
+# 개발 중 백업 파일
+*~
+.#*
+\#*#

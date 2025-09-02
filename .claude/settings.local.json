@@ -10,7 +10,11 @@
       "Bash(git config:*)",
       "Bash(git branch:*)",
       "Bash(ssh:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Read(/home/etloveaui/.ssh/**)",
+      "Read(/home/etloveaui/.ssh/**)"
     ],
     "deny": [],
     "ask": []

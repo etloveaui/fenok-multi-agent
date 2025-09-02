@@ -96,6 +96,7 @@ Claude Code 첫 실행 시 자동으로 OAuth 로그인 프로세스가 시작�
 ### Windows (WSL2)
 - **권장**: Ubuntu-22.04 배포판
 - **Git UI**: SourceTree, GitHub Desktop 등과 호환
+- **설정 완료**: WSL2-Windows 간 파일 권한 및 줄바꿈 이슈 해결됨
 
 ### macOS / Linux
 - Node.js 18+ 환경에서 동일하게 동작
@@ -107,6 +108,42 @@ Claude Code 첫 실행 시 자동으로 OAuth 로그인 프로세스가 시작�
 # Claude Code 최신 버전으로 업데이트
 npm update @anthropic-ai/claude-code
 ```
+
+## 🛠️ 트러블슈팅
+
+### SourceTree에서 커밋이 안되는 경우
+
+#### 1. SSH 키 인증 오류 해결 (이미 해결됨)
+WSL2와 Windows 간 SSH 키 동기화가 완료되어 있습니다:
+
+```bash
+# SSH 키가 다음 위치에 복사되어 있음
+C:\Users\eunta\.ssh\id_ed25519
+C:\Users\eunta\.ssh\id_ed25519.pub
+```
+
+#### 2. 소스트리 SSH 설정
+1. **Tools → Options → SSH Client** 에서 **Use System SSH** 선택
+2. 또는 **SSH Key** 탭에서 키 경로 직접 설정: `C:\Users\eunta\.ssh\id_ed25519`
+
+#### 3. Git 설정 (이미 적용됨)
+```bash
+# WSL2에서 Git 설정 
+git config --local core.autocrlf false
+git config --local core.filemode false
+```
+
+### SSH 키 설정 확인
+```bash
+# GitHub SSH 연결 테스트
+ssh -T git@github.com
+```
+
+## 📚 상세 문서
+
+- [Git UI 도구 호환성 가이드](docs/git-ui-setup.md) - 소스트리, GitHub Desktop 등 설정
+- [VS Code Git 설정 가이드](docs/vscode-git-setup.md) - WSL2 환경에서 VS Code Git 사용법  
+- [환경 이식성 가이드](docs/environment-setup.md) - 새 PC에서 완전 복원하는 방법
 
 ## 📝 개발 노트
 
