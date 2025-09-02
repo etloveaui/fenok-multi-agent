@@ -28,7 +28,33 @@ npm run claude
 
 ## 🔧 브라우저 설치 대안책
 
-### 방법 1: 시스템 의존성 선설치
+### 🎯 권장 방법: 수동 설치 (무한대기 우회)
+
+**단계별 수동 설치:**
+```bash
+# 1단계: 시스템 의존성 설치
+sudo apt update && sudo apt install -y \
+  libnss3 libatk-bridge2.0-0 libdrm2 libxss1 \
+  libgtk-3-0 libgbm1 libasound2 libgconf-2-4
+
+# 2단계: Playwright 브라우저 설치 (권한 문제 해결)
+npx playwright install --with-deps
+
+# 3단계: 설치 확인
+npx playwright --version
+ls ~/.cache/ms-playwright/
+
+# 4단계: MCP 서버 재시작
+pkill -f "playwright|mcp"
+npm run claude
+```
+
+**✅ 이 방법의 장점:**
+- "Unfurling..." 무한대기 완전 우회
+- sudo 권한 문제 해결
+- Claude가 아닌 사용자가 직접 설치하므로 안전함
+
+### 방법 2: 기존 시스템 의존성 선설치 (구버전)
 ```bash
 # WSL2에서 브라우저 의존성 설치
 sudo apt update && sudo apt install -y \
